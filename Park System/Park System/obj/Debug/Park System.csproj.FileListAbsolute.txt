@@ -1,0 +1,19 @@
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.csproj.AssemblyReference.cache
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Admin_Dashboard.resources
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Employee.resources
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Login.resources
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_SignUp.resources
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_User.resources
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park_System.Properties.Resources.resources
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.csproj.GenerateResource.cache
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.csproj.CoreCompileInputs.cache
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\Park System.exe.config
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\Park System.exe
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\Park System.pdb
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\EntityFramework.dll
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.dll
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\EntityFramework.xml
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.xml
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.csproj.CopyComplete
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.exe
+D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.pdb
