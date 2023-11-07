@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Park_System.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,19 @@ namespace Park_System.Forms
         {
             Frm_SignUp sign = new Frm_SignUp();
             sign.ShowDialog();
+        }
+
+        private void log_btnlogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Employee empo = new Frm_Employee();
+            empo.Show();
+
+
+            ParkingEntities db = new ParkingEntities();
+
+            //db.Database.ExecuteSqlCommand($"INSERT INTO VALUES {}");
+            
         }
     }
 }

@@ -16,5 +16,17 @@ namespace Park_System.Forms
         {
             InitializeComponent();
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Login log = new Frm_Login();
+            log.Show();
+        }
     }
 }

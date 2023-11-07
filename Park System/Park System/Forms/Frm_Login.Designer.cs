@@ -58,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 224);
+            this.label2.Location = new System.Drawing.Point(78, 224);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 17);
             this.label2.TabIndex = 6;
@@ -68,7 +68,7 @@
             // 
             this.lnklbl_singup.AutoSize = true;
             this.lnklbl_singup.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnklbl_singup.Location = new System.Drawing.Point(206, 224);
+            this.lnklbl_singup.Location = new System.Drawing.Point(225, 224);
             this.lnklbl_singup.Name = "lnklbl_singup";
             this.lnklbl_singup.Size = new System.Drawing.Size(52, 17);
             this.lnklbl_singup.TabIndex = 5;
@@ -79,12 +79,13 @@
             // log_btnlogin
             // 
             this.log_btnlogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log_btnlogin.Location = new System.Drawing.Point(249, 149);
+            this.log_btnlogin.Location = new System.Drawing.Point(249, 148);
             this.log_btnlogin.Name = "log_btnlogin";
             this.log_btnlogin.Size = new System.Drawing.Size(79, 28);
             this.log_btnlogin.TabIndex = 4;
             this.log_btnlogin.Text = "Log In";
             this.log_btnlogin.UseVisualStyleBackColor = true;
+            this.log_btnlogin.Click += new System.EventHandler(this.log_btnlogin_Click);
             // 
             // log_txtusername
             // 

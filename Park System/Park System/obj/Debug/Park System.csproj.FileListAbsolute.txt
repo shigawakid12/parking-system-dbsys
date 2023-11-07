@@ -17,3 +17,23 @@ D:\APPSDEVCOPY\Dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer
 D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.csproj.CopyComplete
 D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.exe
 D:\APPSDEVCOPY\Dbsys\Park System\Park System\obj\Debug\Park System.pdb
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.exe.config
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.exe
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.pdb
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Admin_Dashboard.resources
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Employee.resources
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Login.resources
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_SignUp.resources
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_User.resources
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.exe
+C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.pdb

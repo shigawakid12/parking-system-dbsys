@@ -173,6 +173,7 @@
             this.Name = "Frm_SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_SignUp";
+            this.Load += new System.EventHandler(this.Frm_SignUp_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

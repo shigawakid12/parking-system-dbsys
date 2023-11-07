@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Park_System.Utils
 {
+
+    DateTime datime = 
     public enum ErrorCode
     {
         Success = 0,
@@ -18,6 +20,8 @@ namespace Park_System.Utils
         Employee = 2,
         Admin = 3
     }
+
+    public static DateTime Now { get; }
 
     public class Constant
     {

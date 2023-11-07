@@ -21,5 +21,10 @@ namespace Park_System.Forms
         {
           
         }
+
+        private void Frm_SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
