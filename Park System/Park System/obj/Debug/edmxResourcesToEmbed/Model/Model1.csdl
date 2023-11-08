@@ -28,7 +28,7 @@
     <Property Name="userTimeArrive" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="userId" Type="Int32" />
   </EntityType>
-  <EntityContainer Name="ParkingEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="ParkingEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="EmployeeAccount" EntityType="Self.EmployeeAccount" />
     <EntitySet Name="Role" EntityType="Self.Role" />
     <EntitySet Name="UserInformation" EntityType="Self.UserInformation" />

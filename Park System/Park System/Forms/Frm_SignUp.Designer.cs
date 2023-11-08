@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.log_btnlogin = new System.Windows.Forms.Button();
+            this.sign_btnregister = new System.Windows.Forms.Button();
             this.lblrole = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblconfirmpassword = new System.Windows.Forms.Label();
@@ -40,12 +41,14 @@
             this.sign_txtUsername = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.sign_txtName = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.log_btnlogin);
+            this.groupBox1.Controls.Add(this.sign_btnregister);
             this.groupBox1.Controls.Add(this.lblrole);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblconfirmpassword);
@@ -62,16 +65,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // log_btnlogin
+            // sign_btnregister
             // 
-            this.log_btnlogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log_btnlogin.Location = new System.Drawing.Point(29, 330);
-            this.log_btnlogin.Name = "log_btnlogin";
-            this.log_btnlogin.Size = new System.Drawing.Size(193, 28);
-            this.log_btnlogin.TabIndex = 12;
-            this.log_btnlogin.Text = "Register";
-            this.log_btnlogin.UseVisualStyleBackColor = true;
-            this.log_btnlogin.Click += new System.EventHandler(this.log_btnlogin_Click);
+            this.sign_btnregister.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sign_btnregister.Location = new System.Drawing.Point(29, 330);
+            this.sign_btnregister.Name = "sign_btnregister";
+            this.sign_btnregister.Size = new System.Drawing.Size(193, 28);
+            this.sign_btnregister.TabIndex = 12;
+            this.sign_btnregister.Text = "Register";
+            this.sign_btnregister.UseVisualStyleBackColor = true;
+            this.sign_btnregister.Click += new System.EventHandler(this.log_btnlogin_Click);
             // 
             // lblrole
             // 
@@ -164,6 +167,10 @@
             this.sign_txtName.Size = new System.Drawing.Size(193, 27);
             this.sign_txtName.TabIndex = 1;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Frm_SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +183,7 @@
             this.Load += new System.EventHandler(this.Frm_SignUp_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,7 +191,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button log_btnlogin;
+        private System.Windows.Forms.Button sign_btnregister;
         private System.Windows.Forms.Label lblrole;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblconfirmpassword;
@@ -194,5 +202,6 @@
         private System.Windows.Forms.TextBox sign_txtUsername;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox sign_txtName;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

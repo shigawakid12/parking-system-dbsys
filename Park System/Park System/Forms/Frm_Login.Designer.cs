@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lnklbl_singup = new System.Windows.Forms.LinkLabel();
@@ -36,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.log_txtpassword = new System.Windows.Forms.TextBox();
             this.lblusername = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -123,6 +126,10 @@
             this.lblusername.TabIndex = 2;
             this.lblusername.Text = "Username :";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,6 +142,7 @@
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,5 +157,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox log_txtpassword;
         private System.Windows.Forms.Label lblusername;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

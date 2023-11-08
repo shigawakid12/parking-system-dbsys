@@ -37,3 +37,14 @@ C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj
 C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.exe
 C:\Users\Admin\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.pdb
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.AssemblyReference.cache
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Admin_Dashboard.resources
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Employee.resources
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Login.resources
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_SignUp.resources
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_User.resources
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Properties.Resources.resources
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.GenerateResource.cache
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CoreCompileInputs.cache
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.exe
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.pdb

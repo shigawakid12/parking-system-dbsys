@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\APPSDEVCOPY\Dbsys\Park System\Park System\Model\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\Model\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

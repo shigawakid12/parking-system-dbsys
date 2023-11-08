@@ -1,4 +1,5 @@
 ﻿using Park_System.Model;
+using Park_System.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,14 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Park_System.Forms
 {
     public partial class Frm_Login : Form
     {
-        
+        UserRepository userRepo;
+        private object errorProviderCustom;
+
         public Frm_Login()
         {
             InitializeComponent();
+            userRepo = new UserRepository();
         }
 
         private void Frm_Login_Load(object sender, EventArgs e)
@@ -35,12 +40,32 @@ namespace Park_System.Forms
             this.Hide();
             Frm_Employee empo = new Frm_Employee();
             empo.Show();
+            //ParkingEntities1 db = new ParkingEntities1();
+            if (String.IsNullOrEmpty(log_txtusername.Text))
+            {
+                errorProvider1.SetError(log_txtusername, "Empty Field!");
+                return;
+            }
+            if (String.IsNullOrEmpty(log_txtpassword.Text))
+            {
+                errorProvider1.SetError(log_txtpassword, "Empty Field!");
+                return;
+            }
+
+            var userLogged = userRepo.GetUserByUsername(txtUsername.Text);
 
 
-            ParkingEntities db = new ParkingEntities();
 
-            //db.Database.ExecuteSqlCommand($"INSERT INTO VALUES {}");
-            
+
+            //db.Database.ExecuteSqlCommand()
+
+
+
+
+
+
+            // db.Database.ExecuteSqlCommand($"INSERT INTO VALUES {}");
+
         }
     }
 }
