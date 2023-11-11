@@ -31,11 +31,19 @@ CREATE TABLE [dbo].[Role](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-USE [DBSYS]
+USE Parking
 GO
 SET IDENTITY_INSERT [dbo].[Role] ON 
 
-INSERT [dbo].[Role] ([roleId], [roleName], [roleDescription]) VALUES (1, N'Student', N'Student ')
-INSERT [dbo].[Role] ([roleId], [roleName], [roleDescription]) VALUES (2, N'Teacher', N'Teacher')
-INSERT [dbo].[Role] ([roleId], [roleName], [roleDescription]) VALUES (3, N'Admin', N'Admin')
+INSERT [dbo].[Role] ([roleId], [roleName], [roleDescription]) VALUES (1, N'User', N'User ')
+INSERT [dbo].[Role] ([roleId], [roleName], [roleDescription]) VALUES (2, N'Admin', N'Admin')
+UPDATE [dbo].[Role] set roleName = 'User', roleDescription = 'User' where roleId = 1;
+update [dbo].[Role] set roleName = 'Admin', roleDescription = 'Admin' where roleId = 2;
+delete from [dbo].[Role] where roleId = 3;
+--INSERT [dbo].[Role] ([roleId], [roleName], [roleDescription]) VALUES (3, N'Admin', N'Admin')
 SET IDENTITY_INSERT [dbo].[Role] OFF
+
+
+select * from [dbo].[Role]
+select * from UserAccount
+select * from UserInformation

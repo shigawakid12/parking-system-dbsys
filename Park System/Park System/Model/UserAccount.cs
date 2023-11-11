@@ -12,7 +12,7 @@ namespace Park_System.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class EmployeeAccount
+    public partial class UserAccount
     {
         public int userId { get; set; }
         public string userName { get; set; }

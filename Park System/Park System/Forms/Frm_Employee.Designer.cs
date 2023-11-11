@@ -46,6 +46,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbltime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 185);
+            this.label3.Location = new System.Drawing.Point(28, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 21);
             this.label3.TabIndex = 2;
@@ -84,7 +85,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 248);
+            this.label4.Location = new System.Drawing.Point(24, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 21);
             this.label4.TabIndex = 3;
@@ -123,6 +124,7 @@
             this.btn_Save.TabIndex = 8;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Update
             // 
@@ -201,15 +203,26 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // lbltime
+            // 
+            this.lbltime.AutoSize = true;
+            this.lbltime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime.Location = new System.Drawing.Point(28, 302);
+            this.lbltime.Name = "lbltime";
+            this.lbltime.Size = new System.Drawing.Size(112, 21);
+            this.lbltime.TabIndex = 16;
+            this.lbltime.Text = "Time Entered";
             // 
             // Frm_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 516);
+            this.Controls.Add(this.lbltime);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtSearch);
@@ -228,6 +241,7 @@
             this.Name = "Frm_Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Dashboard";
+            this.Load += new System.EventHandler(this.Frm_Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -255,5 +269,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.Label lbltime;
     }
 }

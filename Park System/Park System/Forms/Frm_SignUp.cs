@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,11 @@ namespace Park_System.Forms
 {
     public partial class Frm_SignUp : Form
     {
-        ParkingEntities db;
+        ParkingEntities db = new ParkingEntities();
         public Frm_SignUp()
         {
             InitializeComponent();
-            db = new ParkingEntities();
+           // db = new ParkingEntities();
         }
 
         private void log_btnlogin_Click(object sender, EventArgs e)
@@ -47,13 +48,62 @@ namespace Park_System.Forms
                 return;
             }
 
-            UserAccount nuserAccount = new UserAccount();
-            nuserAccount
+            //try
+            //{
+            //    UserAccount nUserAccount = new UserAccount();
+            //    nUserAccount.userName = sign_txtUsername.Text;
+            //    nUserAccount.userName = sign_txtPassword.Text;
+            //    nUserAccount.roleId = (Int32)comboBox1.SelectedValue;
+            //    nUserAccount.userStatus = "Active";
+
+            //    db.UserAccount.Add(nUserAccount);
+            //    db.SaveChanges();
+
+            //    sign_txtName.Clear();
+            //    sign_txtPassword.Clear();
+            //    sign_txtUsername.Clear();
+            //    MessageBox.Show("Successfully Registered!");
+            //}
+            //catch (DbEntityValidationException ex)
+            //{
+            //    foreach (var validationErrors in ex.EntityValidationErrors)
+            //    {
+            //        foreach (var error in validationErrors.ValidationErrors)
+            //        {
+            //            Console.WriteLine($"Entity: {validationErrors.Entry.Entity.GetType().Name}, Property: {error.PropertyName}, Error: {error.ErrorMessage}");
+            //        }
+            //    }
+
+            //}
+            UserAccount nUserAccount = new UserAccount();
+            nUserAccount.userName = sign_txtUsername.Text;
+            nUserAccount.userPassword = sign_txtPassword.Text;
+            nUserAccount.roleId = (Int32)comboBox1.SelectedValue;
+            nUserAccount.userStatus = "Active";
+
+            db.UserAccount.Add(nUserAccount);
+            db.SaveChanges();
+
+            sign_txtName.Clear();
+            sign_txtPassword.Clear();
+            sign_txtUsername.Clear();
+            MessageBox.Show("Successfully Registered!");
         }
+
+
 
         private void Frm_SignUp_Load(object sender, EventArgs e)
         {
+            loadcomboBox1();
+        }
 
+        private void loadcomboBox1()
+        {
+            var roles = db.Role.ToList();
+
+            comboBox1.ValueMember = "roleId";
+            comboBox1.DisplayMember = "roleName";
+            comboBox1.DataSource = roles;
         }
     }
 }

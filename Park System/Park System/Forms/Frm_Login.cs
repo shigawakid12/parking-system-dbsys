@@ -1,5 +1,6 @@
 ﻿using Park_System.Model;
 using Park_System.Repository;
+using Park_System.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,6 @@ namespace Park_System.Forms
     public partial class Frm_Login : Form
     {
         UserRepository userRepo;
-        private object errorProviderCustom;
 
         public Frm_Login()
         {
@@ -37,9 +37,6 @@ namespace Park_System.Forms
 
         private void log_btnlogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Frm_Employee empo = new Frm_Employee();
-            empo.Show();
             //ParkingEntities1 db = new ParkingEntities1();
             if (String.IsNullOrEmpty(log_txtusername.Text))
             {
@@ -52,17 +49,38 @@ namespace Park_System.Forms
                 return;
             }
 
-            var userLogged = userRepo.GetUserByUsername(txtUsername.Text);
+            var userLogged = userRepo.GetUserByUsername(log_txtusername.Text);
 
+            if (userLogged != null) { 
+                if(userLogged.userPassword.Equals(log_txtpassword.Text))
+                {
+                    UserLogged.GetInstance().UserAccount = userLogged;
 
-
-
+                    switch ((Park_System.Utils.Role)userLogged.roleId)
+                    {
+                        case Park_System.Utils.Role.User:
+                            new Frm_Employee().Show();
+                            this.Hide();
+                            break;
+                        case Park_System.Utils.Role.Admin:
+                            new Frm_Employee().Show();
+                            this.Hide();
+                            break;
+                        default:
+                            MessageBox.Show("User has no role!");
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Password");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Username not Found!");
+            }
             //db.Database.ExecuteSqlCommand()
-
-
-
-
-
 
             // db.Database.ExecuteSqlCommand($"INSERT INTO VALUES {}");
 

@@ -18,12 +18,12 @@ namespace Park_System.Repository
         {
             db = new ParkingEntities();
         }
-        public ErrorCode NewUser(EmployeeAccount aEmployeeAccount, ref String outMessage)
+        public ErrorCode NewUser(UserAccount auserAccount, ref String outMessage)
         {
             ErrorCode retValue = ErrorCode.Error;
             try
             {
-                db.EmployeeAccount.Add(aEmployeeAccount);
+                db.UserAccount.Add(auserAccount);
                 db.SaveChanges();
 
                 outMessage = "Inserted";
@@ -42,10 +42,17 @@ namespace Park_System.Repository
             using (db = new ParkingEntities())
             {
                 // SELECT TOP 1 * FROM USERACCOUNT WHERE userName == username
-                return db.UserAccount.Where(userName == username).FirstOrDefault();
+               return db.UserAccount.Where(s => s.userName == username).FirstOrDefault();
             }
         }
 
+        public List<UserAccount> UserAccounts()
+        {
+            using (db = new ParkingEntities())
+            {
+                return db.UserAccount.ToList();
+            }
+        }
 
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Park_System.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,6 @@ namespace Park_System.Utils
 
         // *********** Member 
         public UserAccount UserAccount { get; set; }
-
 
         //************
         private UserLogged()

@@ -28,5 +28,15 @@ namespace Park_System.Forms
             Frm_Login log = new Frm_Login();
             log.Show();
         }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm_Employee_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

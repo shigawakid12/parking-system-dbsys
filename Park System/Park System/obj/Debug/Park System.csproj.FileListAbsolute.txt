@@ -48,3 +48,11 @@ D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park
 D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CoreCompileInputs.cache
 D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.exe
 D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.pdb
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.exe.config
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.exe
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.pdb
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.dll
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.dll
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.xml
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.xml
+D:\APPSDEVCOPY\Dbsys\Parking System Github\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CopyComplete
