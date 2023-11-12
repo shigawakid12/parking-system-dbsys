@@ -13,10 +13,11 @@ userStatus varchar (10) not NULL default 'ACTIVE',
 CREATE TABLE UserInformation (
 userPlatenum integer IDENTITY(1,1) primary key,
 userTypeCar varchar (50) not null,
-userTimeOut time (50) not null,
+userTimeOut integer (50) not null,
 userTimeArrive varchar not null,
 userId integer,
-FOREIGN KEY (userId) REFERENCES UserAccount(userId)
+FOREIGN KEY (userId) REFERENCES UserAccount(userId),
+parkSlot int not null
 );
 
 
@@ -42,6 +43,12 @@ update [dbo].[Role] set roleName = 'Admin', roleDescription = 'Admin' where role
 delete from [dbo].[Role] where roleId = 3;
 --INSERT [dbo].[Role] ([roleId], [roleName], [roleDescription]) VALUES (3, N'Admin', N'Admin')
 SET IDENTITY_INSERT [dbo].[Role] OFF
+
+create table ParkSlot (
+	parkSlot int primary key
+);
+
+SELECT 
 
 
 select * from [dbo].[Role]

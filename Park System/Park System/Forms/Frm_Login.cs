@@ -63,7 +63,7 @@ namespace Park_System.Forms
                             this.Hide();
                             break;
                         case Park_System.Utils.Role.Admin:
-                            new Frm_Employee().Show();
+                            new Frm_Admin_Dashboard().Show();
                             this.Hide();
                             break;
                         default:

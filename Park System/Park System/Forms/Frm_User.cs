@@ -24,5 +24,10 @@ namespace Park_System.Forms
         {
             label4.Text = (DateTime.Now).ToString();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

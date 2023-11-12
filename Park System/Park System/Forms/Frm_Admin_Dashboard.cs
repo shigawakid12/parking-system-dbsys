@@ -31,5 +31,19 @@ namespace Park_System.Forms
         {
 
         }
+
+        private void toolStripLabel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_User frm_User = new Frm_User();
+            frm_User.Show();
+
+
+        }
     }
 }
