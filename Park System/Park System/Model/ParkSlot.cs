@@ -12,22 +12,20 @@ namespace Park_System.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class UserAccount
+    public partial class ParkSlot
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UserAccount()
+        public ParkSlot()
         {
             this.UserInformation = new HashSet<UserInformation>();
+            this.UserInformation1 = new HashSet<UserInformation>();
         }
     
-        public int userId { get; set; }
-        public string userName { get; set; }
-        public string userPassword { get; set; }
-        public Nullable<int> roleId { get; set; }
-        public string userStatus { get; set; }
+        public int parkSlot1 { get; set; }
     
-        public virtual Role Role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserInformation> UserInformation { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserInformation> UserInformation1 { get; set; }
     }
 }

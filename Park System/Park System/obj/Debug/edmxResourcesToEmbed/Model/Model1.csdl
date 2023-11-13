@@ -1,11 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ParkingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="ParkingEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ParkingModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ParkingModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="ParkSlot" EntityType="ParkingModel.ParkSlot" />
     <EntitySet Name="Role" EntityType="ParkingModel.Role" />
     <EntitySet Name="sysdiagrams" EntityType="ParkingModel.sysdiagrams" />
     <EntitySet Name="UserAccount" EntityType="ParkingModel.UserAccount" />
     <EntitySet Name="UserInformation" EntityType="ParkingModel.UserInformation" />
+    <AssociationSet Name="FK_UserInformation_ParkSlot" Association="ParkingModel.FK_UserInformation_ParkSlot">
+      <End Role="ParkSlot" EntitySet="ParkSlot" />
+      <End Role="UserInformation" EntitySet="UserInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInformation_ParkSlot1" Association="ParkingModel.FK_UserInformation_ParkSlot1">
+      <End Role="ParkSlot" EntitySet="ParkSlot" />
+      <End Role="UserInformation" EntitySet="UserInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAccount_Role" Association="ParkingModel.FK_UserAccount_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="UserAccount" EntitySet="UserAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInformation_UserAccount" Association="ParkingModel.FK_UserInformation_UserAccount">
+      <End Role="UserAccount" EntitySet="UserAccount" />
+      <End Role="UserInformation" EntitySet="UserInformation" />
+    </AssociationSet>
   </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="ParkSlot">
+    <Key>
+      <PropertyRef Name="parkSlot1" />
+    </Key>
+    <Property Name="parkSlot1" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserInformation" Relationship="ParkingModel.FK_UserInformation_ParkSlot" FromRole="ParkSlot" ToRole="UserInformation" />
+    <NavigationProperty Name="UserInformation1" Relationship="ParkingModel.FK_UserInformation_ParkSlot1" FromRole="ParkSlot" ToRole="UserInformation" />
+  </EntityType>
   <EntityType Name="Role">
     <Key>
       <PropertyRef Name="roleId" />
@@ -13,6 +79,7 @@
     <Property Name="roleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="roleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="roleDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserAccount" Relationship="ParkingModel.FK_UserAccount_Role" FromRole="Role" ToRole="UserAccount" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -33,15 +100,69 @@
     <Property Name="userPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="roleId" Type="Int32" />
     <Property Name="userStatus" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Role" Relationship="ParkingModel.FK_UserAccount_Role" FromRole="UserAccount" ToRole="Role" />
+    <NavigationProperty Name="UserInformation" Relationship="ParkingModel.FK_UserInformation_UserAccount" FromRole="UserAccount" ToRole="UserInformation" />
   </EntityType>
   <EntityType Name="UserInformation">
     <Key>
       <PropertyRef Name="userPlatenum" />
     </Key>
-    <Property Name="userPlatenum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userPlatenum" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="userTypeCar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="userTimeOut" Type="DateTime" Precision="3" />
+    <Property Name="userTimeOut" Type="Int32" Nullable="false" />
     <Property Name="userTimeArrive" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
     <Property Name="userId" Type="Int32" />
+    <Property Name="parkSlot" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ParkSlot1" Relationship="ParkingModel.FK_UserInformation_ParkSlot" FromRole="UserInformation" ToRole="ParkSlot" />
+    <NavigationProperty Name="ParkSlot2" Relationship="ParkingModel.FK_UserInformation_ParkSlot1" FromRole="UserInformation" ToRole="ParkSlot" />
+    <NavigationProperty Name="UserAccount" Relationship="ParkingModel.FK_UserInformation_UserAccount" FromRole="UserInformation" ToRole="UserAccount" />
   </EntityType>
+  <Association Name="FK_UserInformation_ParkSlot">
+    <End Type="ParkingModel.ParkSlot" Role="ParkSlot" Multiplicity="1" />
+    <End Type="ParkingModel.UserInformation" Role="UserInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParkSlot">
+        <PropertyRef Name="parkSlot1" />
+      </Principal>
+      <Dependent Role="UserInformation">
+        <PropertyRef Name="parkSlot" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInformation_ParkSlot1">
+    <End Type="ParkingModel.ParkSlot" Role="ParkSlot" Multiplicity="1" />
+    <End Type="ParkingModel.UserInformation" Role="UserInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParkSlot">
+        <PropertyRef Name="parkSlot1" />
+      </Principal>
+      <Dependent Role="UserInformation">
+        <PropertyRef Name="parkSlot" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAccount_Role">
+    <End Type="ParkingModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="ParkingModel.UserAccount" Role="UserAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="roleId" />
+      </Principal>
+      <Dependent Role="UserAccount">
+        <PropertyRef Name="roleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInformation_UserAccount">
+    <End Type="ParkingModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+    <End Type="ParkingModel.UserInformation" Role="UserInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="UserInformation">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

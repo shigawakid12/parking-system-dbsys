@@ -22,7 +22,7 @@ namespace Park_System
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Employee());
+            Application.Run(new Frm_Login());
 
         }
     }

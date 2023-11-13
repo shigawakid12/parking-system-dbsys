@@ -14,8 +14,17 @@ namespace Park_System.Model
     
     public partial class Role
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Role()
+        {
+            this.UserAccount = new HashSet<UserAccount>();
+        }
+    
         public int roleId { get; set; }
         public string roleName { get; set; }
         public string roleDescription { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserAccount> UserAccount { get; set; }
     }
 }

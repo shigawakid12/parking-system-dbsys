@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Park_System.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Park_System.Forms
 {
     public partial class Frm_Employee : Form
     {
+        ParkingEntities db = new ParkingEntities();
         public Frm_Employee()
         {
             InitializeComponent();
@@ -31,6 +33,37 @@ namespace Park_System.Forms
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            
+
+            if (String.IsNullOrEmpty(Emp_txtPlateno.Text))
+            {
+                errorProvider1.SetError(Emp_txtPlateno, "Empty Field!");
+                return;
+            }
+            if (String.IsNullOrEmpty(Emp_txtDateEnter.Text))
+            {
+                errorProvider1.SetError(Emp_txtCarbrand, "Empty Field!");
+                return;
+            }
+            if (String.IsNullOrEmpty(Emp_txtDateEnter.Text))
+            {
+                errorProvider1.SetError(Emp_txtDateEnter, "Empty Field!");
+                return;
+            }
+            if (String.IsNullOrEmpty(Emp_lblslot.Text))
+            {
+                errorProvider1.SetError(Emp_lblslot, "Empty Field!");
+                return;
+            }
+
+            UserInformation UserInfo = new UserInformation();
+            UserInfo.userPlatenum = Emp_txtPlateno.Text;
+            UserInfo.userTypeCar = Emp_txtCarbrand.Text;
+            UserInfo.userTimeArrive = Emp_txtDateEnter.Text;
+            int text1 = (int)Emp_txtSlot.Text;
+            UserInfo.parkSlot = text1;
+            
+
 
         }
 
