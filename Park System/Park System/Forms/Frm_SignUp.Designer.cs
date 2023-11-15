@@ -64,6 +64,7 @@
             this.groupBox1.Size = new System.Drawing.Size(257, 385);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // sign_btnregister
             // 
@@ -175,6 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(225)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(300, 458);
             this.Controls.Add(this.groupBox1);
             this.Name = "Frm_SignUp";

@@ -105,5 +105,10 @@ namespace Park_System.Forms
             comboBox1.DisplayMember = "roleName";
             comboBox1.DataSource = roles;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

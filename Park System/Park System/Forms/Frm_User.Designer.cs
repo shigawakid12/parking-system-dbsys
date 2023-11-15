@@ -54,103 +54,113 @@
             // 
             // btn_slot1
             // 
+            this.btn_slot1.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot1.Location = new System.Drawing.Point(36, 130);
             this.btn_slot1.Name = "btn_slot1";
             this.btn_slot1.Size = new System.Drawing.Size(73, 71);
             this.btn_slot1.TabIndex = 4;
             this.btn_slot1.Text = "1";
-            this.btn_slot1.UseVisualStyleBackColor = true;
+            this.btn_slot1.UseVisualStyleBackColor = false;
             // 
             // btn_slot2
             // 
+            this.btn_slot2.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot2.Location = new System.Drawing.Point(141, 130);
             this.btn_slot2.Name = "btn_slot2";
             this.btn_slot2.Size = new System.Drawing.Size(73, 71);
             this.btn_slot2.TabIndex = 5;
             this.btn_slot2.Text = "2";
-            this.btn_slot2.UseVisualStyleBackColor = true;
+            this.btn_slot2.UseVisualStyleBackColor = false;
             // 
             // btn_slot3
             // 
+            this.btn_slot3.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot3.Location = new System.Drawing.Point(250, 130);
             this.btn_slot3.Name = "btn_slot3";
             this.btn_slot3.Size = new System.Drawing.Size(73, 71);
             this.btn_slot3.TabIndex = 6;
             this.btn_slot3.Text = "3";
-            this.btn_slot3.UseVisualStyleBackColor = true;
+            this.btn_slot3.UseVisualStyleBackColor = false;
             // 
             // btn_slot4
             // 
+            this.btn_slot4.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot4.Location = new System.Drawing.Point(354, 130);
             this.btn_slot4.Name = "btn_slot4";
             this.btn_slot4.Size = new System.Drawing.Size(73, 71);
             this.btn_slot4.TabIndex = 7;
             this.btn_slot4.Text = "4";
-            this.btn_slot4.UseVisualStyleBackColor = true;
+            this.btn_slot4.UseVisualStyleBackColor = false;
             // 
             // btn_slot5
             // 
+            this.btn_slot5.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot5.Location = new System.Drawing.Point(461, 130);
             this.btn_slot5.Name = "btn_slot5";
             this.btn_slot5.Size = new System.Drawing.Size(73, 71);
             this.btn_slot5.TabIndex = 8;
             this.btn_slot5.Text = "5";
-            this.btn_slot5.UseVisualStyleBackColor = true;
+            this.btn_slot5.UseVisualStyleBackColor = false;
             // 
             // btn_slot6
             // 
+            this.btn_slot6.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot6.Location = new System.Drawing.Point(36, 226);
             this.btn_slot6.Name = "btn_slot6";
             this.btn_slot6.Size = new System.Drawing.Size(73, 71);
             this.btn_slot6.TabIndex = 9;
             this.btn_slot6.Text = "6";
-            this.btn_slot6.UseVisualStyleBackColor = true;
+            this.btn_slot6.UseVisualStyleBackColor = false;
             // 
             // btn_slot7
             // 
+            this.btn_slot7.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot7.Location = new System.Drawing.Point(141, 226);
             this.btn_slot7.Name = "btn_slot7";
             this.btn_slot7.Size = new System.Drawing.Size(73, 71);
             this.btn_slot7.TabIndex = 10;
             this.btn_slot7.Text = "7";
-            this.btn_slot7.UseVisualStyleBackColor = true;
+            this.btn_slot7.UseVisualStyleBackColor = false;
             // 
             // btn_slot8
             // 
+            this.btn_slot8.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot8.Location = new System.Drawing.Point(250, 226);
             this.btn_slot8.Name = "btn_slot8";
             this.btn_slot8.Size = new System.Drawing.Size(73, 71);
             this.btn_slot8.TabIndex = 11;
             this.btn_slot8.Text = "8";
-            this.btn_slot8.UseVisualStyleBackColor = true;
+            this.btn_slot8.UseVisualStyleBackColor = false;
             // 
             // btn_slot9
             // 
+            this.btn_slot9.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot9.Location = new System.Drawing.Point(354, 226);
             this.btn_slot9.Name = "btn_slot9";
             this.btn_slot9.Size = new System.Drawing.Size(73, 71);
             this.btn_slot9.TabIndex = 12;
             this.btn_slot9.Text = "9";
-            this.btn_slot9.UseVisualStyleBackColor = true;
+            this.btn_slot9.UseVisualStyleBackColor = false;
             // 
             // btn_slot10
             // 
+            this.btn_slot10.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_slot10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_slot10.Location = new System.Drawing.Point(461, 226);
             this.btn_slot10.Name = "btn_slot10";
             this.btn_slot10.Size = new System.Drawing.Size(73, 71);
             this.btn_slot10.TabIndex = 13;
             this.btn_slot10.Text = "10";
-            this.btn_slot10.UseVisualStyleBackColor = true;
+            this.btn_slot10.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -176,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(573, 517);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

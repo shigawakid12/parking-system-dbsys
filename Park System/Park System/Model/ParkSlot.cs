@@ -14,18 +14,6 @@ namespace Park_System.Model
     
     public partial class ParkSlot
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ParkSlot()
-        {
-            this.UserInformation = new HashSet<UserInformation>();
-            this.UserInformation1 = new HashSet<UserInformation>();
-        }
-    
         public int parkSlot1 { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserInformation> UserInformation { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserInformation> UserInformation1 { get; set; }
     }
 }

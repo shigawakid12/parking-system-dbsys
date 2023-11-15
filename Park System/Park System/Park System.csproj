@@ -186,6 +186,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Untitled-removebg-preview.png" />
+    <None Include="Resources\Untitled.jpg" />
+    <None Include="Resources\parking-management-system-high-resolution-logo %281%29.png" />
     <None Include="Resources\parkingLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

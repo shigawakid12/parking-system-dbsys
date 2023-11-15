@@ -16,6 +16,8 @@ namespace Park_System.Utils
         // *********** Member 
         public UserAccount UserAccount { get; set; }
 
+        public UserInformation UserInformation { get; set; }
+
         //************
         private UserLogged()
         {

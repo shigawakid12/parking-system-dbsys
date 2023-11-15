@@ -18,6 +18,10 @@ namespace Park_System.Utils
         User = 1,
         Admin = 2
     }
+    public enum parkSlot
+    {
+
+    }
 
 
     public class Constant

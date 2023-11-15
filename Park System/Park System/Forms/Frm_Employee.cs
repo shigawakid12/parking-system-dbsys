@@ -31,9 +31,11 @@ namespace Park_System.Forms
             log.Show();
         }
 
+       
+
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            
+            Emp_txtDateEnter.Text = Convert.ToString(DateTime.Now);
 
             if (String.IsNullOrEmpty(Emp_txtPlateno.Text))
             {
@@ -60,16 +62,25 @@ namespace Park_System.Forms
             UserInfo.userPlatenum = Emp_txtPlateno.Text;
             UserInfo.userTypeCar = Emp_txtCarbrand.Text;
             UserInfo.userTimeArrive = Emp_txtDateEnter.Text;
-            int text1 = (int)Emp_txtSlot.Text;
+            UserInfo.userTimeOut = " ";
+            // UserInfo.parkSlot = Emp_txtSlot.Text;
+            int text1 = Convert.ToInt32(Emp_txtSlot.Text);
             UserInfo.parkSlot = text1;
-            
 
+            db.UserInformation.Add(UserInfo);
+            db.SaveChanges();
+
+            Emp_txtPlateno.Clear();
+            Emp_txtCarbrand.Clear();
+            Emp_txtDateEnter.Clear();
+            MessageBox.Show("Successfully Registered!");
 
         }
 
         private void Frm_Employee_Load(object sender, EventArgs e)
         {
-            Emp_txtDateEnter.Text = DateTime.Now.ToString();
+            Emp_txtDateEnter.Text = Convert.ToString(DateTime.Now);
+
         }
 
         private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,6 +95,11 @@ namespace Park_System.Forms
             this.Hide();
             Frm_Login frm_Login = new Frm_Login();
             frm_Login.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

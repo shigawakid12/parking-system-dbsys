@@ -39,12 +39,24 @@
       <PropertyRef Name="userPlatenum" />
     </Key>
     <Property Name="userPlatenum" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="userTypeCar" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="userTimeOut" Type="int" Nullable="false" />
-    <Property Name="userTimeArrive" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="userTypeCar" Type="varchar" MaxLength="50" />
+    <Property Name="userTimeOut" Type="varchar" MaxLength="50" />
+    <Property Name="userTimeArrive" Type="varchar" MaxLength="50" />
     <Property Name="userId" Type="int" />
-    <Property Name="parkSlot" Type="int" Nullable="false" />
+    <Property Name="parkSlot" Type="int" />
   </EntityType>
+  <Association Name="FK__UserInfor__userI__40F9A68C">
+    <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="0..1" />
+    <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="UserInformation">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_UserAccount_Role">
     <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
     <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="*" />
@@ -54,42 +66,6 @@
       </Principal>
       <Dependent Role="UserAccount">
         <PropertyRef Name="roleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UserInformation_ParkSlot">
-    <End Role="ParkSlot" Type="Self.ParkSlot" Multiplicity="1" />
-    <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ParkSlot">
-        <PropertyRef Name="parkSlot" />
-      </Principal>
-      <Dependent Role="UserInformation">
-        <PropertyRef Name="parkSlot" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UserInformation_ParkSlot1">
-    <End Role="ParkSlot" Type="Self.ParkSlot" Multiplicity="1" />
-    <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ParkSlot">
-        <PropertyRef Name="parkSlot" />
-      </Principal>
-      <Dependent Role="UserInformation">
-        <PropertyRef Name="parkSlot" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UserInformation_UserAccount">
-    <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="0..1" />
-    <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UserAccount">
-        <PropertyRef Name="userId" />
-      </Principal>
-      <Dependent Role="UserInformation">
-        <PropertyRef Name="userId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -130,21 +106,13 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserInformation" EntityType="Self.UserInformation" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__UserInfor__userI__40F9A68C" Association="Self.FK__UserInfor__userI__40F9A68C">
+      <End Role="UserAccount" EntitySet="UserAccount" />
+      <End Role="UserInformation" EntitySet="UserInformation" />
+    </AssociationSet>
     <AssociationSet Name="FK_UserAccount_Role" Association="Self.FK_UserAccount_Role">
       <End Role="Role" EntitySet="Role" />
       <End Role="UserAccount" EntitySet="UserAccount" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UserInformation_ParkSlot" Association="Self.FK_UserInformation_ParkSlot">
-      <End Role="ParkSlot" EntitySet="ParkSlot" />
-      <End Role="UserInformation" EntitySet="UserInformation" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UserInformation_ParkSlot1" Association="Self.FK_UserInformation_ParkSlot1">
-      <End Role="ParkSlot" EntitySet="ParkSlot" />
-      <End Role="UserInformation" EntitySet="UserInformation" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UserInformation_UserAccount" Association="Self.FK_UserInformation_UserAccount">
-      <End Role="UserAccount" EntitySet="UserAccount" />
-      <End Role="UserInformation" EntitySet="UserInformation" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

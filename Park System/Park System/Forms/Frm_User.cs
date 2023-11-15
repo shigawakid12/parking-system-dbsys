@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Park_System.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -22,7 +23,7 @@ namespace Park_System.Forms
 
         private void Frm_User_Load(object sender, EventArgs e)
         {
-            label4.Text = (DateTime.Now).ToString();
+           // switch()
         }
 
         private void label4_Click(object sender, EventArgs e)

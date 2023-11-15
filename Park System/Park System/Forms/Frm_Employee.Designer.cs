@@ -43,12 +43,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Emp_lblslot = new System.Windows.Forms.Label();
             this.Emp_txtSlot = new System.Windows.Forms.TextBox();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -146,6 +146,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(428, 343);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label5
             // 
@@ -175,6 +176,28 @@
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // Emp_lblslot
+            // 
+            this.Emp_lblslot.AutoSize = true;
+            this.Emp_lblslot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Emp_lblslot.Location = new System.Drawing.Point(24, 249);
+            this.Emp_lblslot.Name = "Emp_lblslot";
+            this.Emp_lblslot.Size = new System.Drawing.Size(99, 21);
+            this.Emp_lblslot.TabIndex = 16;
+            this.Emp_lblslot.Text = "Parking Slot";
+            // 
+            // Emp_txtSlot
+            // 
+            this.Emp_txtSlot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Emp_txtSlot.Location = new System.Drawing.Point(28, 273);
+            this.Emp_txtSlot.Name = "Emp_txtSlot";
+            this.Emp_txtSlot.Size = new System.Drawing.Size(258, 27);
+            this.Emp_txtSlot.TabIndex = 17;
+            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -200,28 +223,6 @@
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click_1);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // Emp_lblslot
-            // 
-            this.Emp_lblslot.AutoSize = true;
-            this.Emp_lblslot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emp_lblslot.Location = new System.Drawing.Point(24, 249);
-            this.Emp_lblslot.Name = "Emp_lblslot";
-            this.Emp_lblslot.Size = new System.Drawing.Size(99, 21);
-            this.Emp_lblslot.TabIndex = 16;
-            this.Emp_lblslot.Text = "Parking Slot";
-            // 
-            // Emp_txtSlot
-            // 
-            this.Emp_txtSlot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emp_txtSlot.Location = new System.Drawing.Point(28, 273);
-            this.Emp_txtSlot.Name = "Emp_txtSlot";
-            this.Emp_txtSlot.Size = new System.Drawing.Size(258, 27);
-            this.Emp_txtSlot.TabIndex = 17;
             // 
             // Frm_Employee
             // 

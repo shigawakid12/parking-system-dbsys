@@ -16,13 +16,11 @@ namespace Park_System.Model
     {
         public string userPlatenum { get; set; }
         public string userTypeCar { get; set; }
-        public int userTimeOut { get; set; }
+        public string userTimeOut { get; set; }
         public string userTimeArrive { get; set; }
         public Nullable<int> userId { get; set; }
-        public int parkSlot { get; set; }
+        public Nullable<int> parkSlot { get; set; }
     
-        public virtual ParkSlot ParkSlot1 { get; set; }
-        public virtual ParkSlot ParkSlot2 { get; set; }
         public virtual UserAccount UserAccount { get; set; }
     }
 }
