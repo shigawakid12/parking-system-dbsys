@@ -1,4 +1,5 @@
 ﻿using Park_System.Model;
+using Park_System.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Park_System.Forms
     public partial class Frm_Employee : Form
     {
         ParkingEntities db = new ParkingEntities();
+        UserRepository userRepo;
         public Frm_Employee()
         {
             InitializeComponent();
@@ -29,6 +31,11 @@ namespace Park_System.Forms
             this.Hide();
             Frm_Login log = new Frm_Login();
             log.Show();
+        }
+
+        public void loadUser()
+        {
+            dataGridView1.DataSource = userRepo.GetUserInfo();
         }
 
        
@@ -74,11 +81,17 @@ namespace Park_System.Forms
             Emp_txtCarbrand.Clear();
             Emp_txtDateEnter.Clear();
             MessageBox.Show("Successfully Registered!");
+            loadUser();
+
+
+
 
         }
 
         private void Frm_Employee_Load(object sender, EventArgs e)
         {
+            userRepo = new UserRepository();
+            loadUser();
             Emp_txtDateEnter.Text = Convert.ToString(DateTime.Now);
 
         }
@@ -98,6 +111,16 @@ namespace Park_System.Forms
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
         {
 
         }

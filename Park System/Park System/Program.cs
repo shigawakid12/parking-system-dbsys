@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Park_System
@@ -22,8 +23,25 @@ namespace Park_System
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Login());
+            Application.Run(new Frm_Employee());
 
+            //Thread newThread1 = new Thread(form_login);
+            //Thread newThread2 = new Thread(form_signup);
+
+            //newThread1.Start(); 
+            //newThread2.Start(); 
+
+
+        }
+
+        public static void form_login()
+        {
+            Application.Run(new Frm_Login());
+        }
+
+        public static void form_signup()
+        {
+            Application.Run(new Frm_SignUp());
         }
     }
 }

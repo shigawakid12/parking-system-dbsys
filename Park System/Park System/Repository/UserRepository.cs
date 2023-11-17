@@ -37,6 +37,7 @@ namespace Park_System.Repository
             return retValue;
         }
 
+
         public UserAccount GetUserByUsername(string username)
         {
             using (db = new ParkingEntities())
@@ -54,7 +55,32 @@ namespace Park_System.Repository
             }
         }
 
+        public List <UserInformation> GetUserInfo()
+        {
+            using (db = new ParkingEntities())
+            {
+                return db.UserInformation.ToList();
+            }
+        }
 
+        public ErrorCode DeletePlate(UserInformation aUser, ref String outMessage)
+        {
+            ErrorCode retValue = ErrorCode.Error; 
+            try
+            {
+                db.UserInformation.Remove(aUser);
+                db.SaveChanges();
+
+                outMessage = "Successfully Deleted!";
+                retValue = ErrorCode.Success;
+            }
+            catch (Exception ex)
+            {
+                outMessage = ex.Message;
+                MessageBox.Show(ex.Message);
+            }
+            return retValue;
+        }
 
     }
 }
