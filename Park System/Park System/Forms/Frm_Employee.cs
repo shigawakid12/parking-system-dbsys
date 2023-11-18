@@ -65,21 +65,18 @@ namespace Park_System.Forms
                 return;
             }
 
-            UserInformation UserInfo = new UserInformation();
-            UserInfo.userPlatenum = Emp_txtPlateno.Text;
-            UserInfo.userTypeCar = Emp_txtCarbrand.Text;
-            UserInfo.userTimeArrive = Emp_txtDateEnter.Text;
-            UserInfo.userTimeOut = " ";
-            // UserInfo.parkSlot = Emp_txtSlot.Text;
-            int text1 = Convert.ToInt32(Emp_txtSlot.Text);
-            UserInfo.parkSlot = text1;
-
-            db.UserInformation.Add(UserInfo);
+            ParkSlot Slots = new ParkSlot();
+            Slots.userPlatenum = Emp_txtPlateno.Text;
+            Slots.userTypeCar = Emp_txtCarbrand.Text;
+            Slots.userTimeArrive = Emp_txtDateEnter.Text;
+            Slots.userTimeOut = " ";
+            //Slots.parkSlot= 
+          
+            db.ParkSlot.Add(Slots);
             db.SaveChanges();
 
             Emp_txtPlateno.Clear();
             Emp_txtCarbrand.Clear();
-            Emp_txtDateEnter.Clear();
             MessageBox.Show("Successfully Registered!");
             loadUser();
 
@@ -90,6 +87,8 @@ namespace Park_System.Forms
 
         private void Frm_Employee_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'parkingDataSet.ParkSlot' table. You can move, or remove it, as needed.
+           // this.parkSlotTableAdapter.Fill(this.parkingDataSet.ParkSlot);
             userRepo = new UserRepository();
             loadUser();
             Emp_txtDateEnter.Text = Convert.ToString(DateTime.Now);
@@ -121,6 +120,11 @@ namespace Park_System.Forms
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

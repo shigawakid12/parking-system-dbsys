@@ -39,7 +39,6 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -50,16 +49,22 @@
             this.Emp_lblslot = new System.Windows.Forms.Label();
             this.Emp_txtSlot = new System.Windows.Forms.TextBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.parkingDataSet = new Park_System.ParkingDataSet();
+            this.parkSlotTableAdapter = new Park_System.ParkingDataSetTableAdapters.ParkSlotTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.parkSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.parkSlotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userPlatenumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTypeCarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTimeArriveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parkSlotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.userTimeOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userInformationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkSlotBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -148,22 +153,6 @@
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userPlatenumDataGridViewTextBoxColumn,
-            this.userTypeCarDataGridViewTextBoxColumn,
-            this.userTimeArriveDataGridViewTextBoxColumn,
-            this.parkSlotDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.userInformationBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(403, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(428, 343);
-            this.dataGridView1.TabIndex = 11;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -241,6 +230,46 @@
             this.Emp_txtSlot.Size = new System.Drawing.Size(258, 27);
             this.Emp_txtSlot.TabIndex = 17;
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // parkingDataSet
+            // 
+            this.parkingDataSet.DataSetName = "ParkingDataSet";
+            this.parkingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // parkSlotTableAdapter
+            // 
+            this.parkSlotTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.parkSlotDataGridViewTextBoxColumn,
+            this.userPlatenumDataGridViewTextBoxColumn,
+            this.userTypeCarDataGridViewTextBoxColumn,
+            this.userTimeArriveDataGridViewTextBoxColumn,
+            this.userTimeOutDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.parkSlotBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(306, 88);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(525, 233);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // parkSlotBindingSource
+            // 
+            this.parkSlotBindingSource.DataSource = typeof(Park_System.Model.ParkSlot);
+            // 
+            // parkSlotDataGridViewTextBoxColumn
+            // 
+            this.parkSlotDataGridViewTextBoxColumn.DataPropertyName = "parkSlot";
+            this.parkSlotDataGridViewTextBoxColumn.HeaderText = "Slot No.";
+            this.parkSlotDataGridViewTextBoxColumn.Name = "parkSlotDataGridViewTextBoxColumn";
+            // 
             // userPlatenumDataGridViewTextBoxColumn
             // 
             this.userPlatenumDataGridViewTextBoxColumn.DataPropertyName = "userPlatenum";
@@ -259,15 +288,11 @@
             this.userTimeArriveDataGridViewTextBoxColumn.HeaderText = "Time Arrive";
             this.userTimeArriveDataGridViewTextBoxColumn.Name = "userTimeArriveDataGridViewTextBoxColumn";
             // 
-            // parkSlotDataGridViewTextBoxColumn
+            // userTimeOutDataGridViewTextBoxColumn
             // 
-            this.parkSlotDataGridViewTextBoxColumn.DataPropertyName = "parkSlot";
-            this.parkSlotDataGridViewTextBoxColumn.HeaderText = "Parking Slot";
-            this.parkSlotDataGridViewTextBoxColumn.Name = "parkSlotDataGridViewTextBoxColumn";
-            // 
-            // userInformationBindingSource
-            // 
-            this.userInformationBindingSource.DataSource = typeof(Park_System.Model.UserInformation);
+            this.userTimeOutDataGridViewTextBoxColumn.DataPropertyName = "userTimeOut";
+            this.userTimeOutDataGridViewTextBoxColumn.HeaderText = "Time Out";
+            this.userTimeOutDataGridViewTextBoxColumn.Name = "userTimeOutDataGridViewTextBoxColumn";
             // 
             // Frm_Employee
             // 
@@ -275,12 +300,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(843, 516);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Emp_txtSlot);
             this.Controls.Add(this.Emp_lblslot);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Save);
@@ -294,12 +319,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Dashboard";
             this.Load += new System.EventHandler(this.Frm_Employee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userInformationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkSlotBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,7 +342,6 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -326,11 +351,16 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label Emp_lblslot;
         private System.Windows.Forms.TextBox Emp_txtSlot;
-        private System.Windows.Forms.BindingSource userInformationBindingSource;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private ParkingDataSet parkingDataSet;
+        private ParkingDataSetTableAdapters.ParkSlotTableAdapter parkSlotTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource parkSlotBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parkSlotDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userPlatenumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeCarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userTimeArriveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn parkSlotDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userTimeOutDataGridViewTextBoxColumn;
     }
 }

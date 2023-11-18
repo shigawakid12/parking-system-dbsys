@@ -37,7 +37,10 @@ namespace Park_System.Repository
             return retValue;
         }
 
+       // public ErrorCode UpdateSlot(int? parkSlot)
 
+
+       // public ErrorCode StoreProfParkslot()
         public UserAccount GetUserByUsername(string username)
         {
             using (db = new ParkingEntities())
@@ -55,20 +58,20 @@ namespace Park_System.Repository
             }
         }
 
-        public List <UserInformation> GetUserInfo()
+        public List <ParkSlot> GetUserInfo()
         {
             using (db = new ParkingEntities())
             {
-                return db.UserInformation.ToList();
+                return db.ParkSlot.ToList();
             }
         }
 
-        public ErrorCode DeletePlate(UserInformation aUser, ref String outMessage)
+        public ErrorCode DeletePlate(ParkSlot aSlot, ref String outMessage)
         {
             ErrorCode retValue = ErrorCode.Error; 
             try
             {
-                db.UserInformation.Remove(aUser);
+                db.ParkSlot.Remove(aSlot);
                 db.SaveChanges();
 
                 outMessage = "Successfully Deleted!";

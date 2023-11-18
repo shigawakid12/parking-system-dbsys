@@ -46,14 +46,17 @@ SET IDENTITY_INSERT [dbo].[Role] OFF
 
 create table ParkSlot (
 	parkSlot int identity (1,1) primary key,
-	parkName [nvarchar] (50)
+	userPlatenum [nvarchar] (50),
+	userTypeCar varchar (50) NULL,
+	userTimeOut Varchar (50) NULL,
+	userTimeArrive varchar (50)NULL
 );
 
 SELECT UserInformation.userPlatenum, UserInformation.userTimeArrive, UserInformation.userTypeCar, UserInformation.userTimeOut,
 ParkSlot.parkSlot From UserInformation JOIN ParkSlot ON UserInformation.parkSlot = ParkSlot.parkSlot
 
 
-drop table UserInformation
+drop table ParkSlot
 
 select * from [dbo].[Role]
 select * from UserAccount
@@ -61,16 +64,6 @@ select * from UserInformation
 select * from ParkSlot
 SELECT parkSlot from UserInformation
 
-insert into ParkSlot (parkSlot,[parkName]) values (1, N'Slot 1')
-insert into ParkSlot (parkSlot,parkName) values (2, N'Slot 2')
-insert into ParkSlot (parkSlot,parkName) values (3, N'Slot 3')
-insert into ParkSlot (parkSlot,parkName) values (4, N'Slot 4')
-insert into ParkSlot (parkSlot,parkName) values (5, N'Slot 5')
-insert into ParkSlot (parkSlot,parkName) values (6, N'Slot 6')
-insert into ParkSlot (parkSlot,parkName) values (7, N'Slot 7')
-insert into ParkSlot (parkSlot,parkName) values (8, N'Slot 8')
-insert into ParkSlot (parkSlot,parkName) values (9, N'Slot 9')
-insert into ParkSlot (parkSlot,parkName) values (10, N'Slot 10')
 
 INSERT UserInformation (parkSlot)
 

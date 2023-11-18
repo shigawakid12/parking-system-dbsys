@@ -14,6 +14,10 @@ namespace Park_System.Model
     
     public partial class ParkSlot
     {
-        public int parkSlot1 { get; set; }
+        public int parkSlot { get; set; }
+        public string userPlatenum { get; set; }
+        public string userTypeCar { get; set; }
+        public string userTimeOut { get; set; }
+        public string userTimeArrive { get; set; }
     }
 }

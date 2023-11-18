@@ -28,7 +28,11 @@
     <EntitySetMapping Name="ParkSlot">
       <EntityTypeMapping TypeName="ParkingModel.ParkSlot">
         <MappingFragment StoreEntitySet="ParkSlot">
-          <ScalarProperty Name="parkSlot1" ColumnName="parkSlot" />
+          <ScalarProperty Name="userTimeArrive" ColumnName="userTimeArrive" />
+          <ScalarProperty Name="userTimeOut" ColumnName="userTimeOut" />
+          <ScalarProperty Name="userTypeCar" ColumnName="userTypeCar" />
+          <ScalarProperty Name="userPlatenum" ColumnName="userPlatenum" />
+          <ScalarProperty Name="parkSlot" ColumnName="parkSlot" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

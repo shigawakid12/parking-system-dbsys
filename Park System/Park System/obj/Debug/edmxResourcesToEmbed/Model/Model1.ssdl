@@ -4,7 +4,11 @@
     <Key>
       <PropertyRef Name="parkSlot" />
     </Key>
-    <Property Name="parkSlot" Type="int" Nullable="false" />
+    <Property Name="parkSlot" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userPlatenum" Type="nvarchar" MaxLength="50" />
+    <Property Name="userTypeCar" Type="varchar" MaxLength="50" />
+    <Property Name="userTimeOut" Type="varchar" MaxLength="50" />
+    <Property Name="userTimeArrive" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -45,7 +49,7 @@
     <Property Name="userId" Type="int" />
     <Property Name="parkSlot" Type="int" />
   </EntityType>
-  <Association Name="FK__UserInfor__userI__40F9A68C">
+  <Association Name="FK__UserInfor__userI__4F47C5E3">
     <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="0..1" />
     <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
     <ReferentialConstraint>
@@ -106,7 +110,7 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserInformation" EntityType="Self.UserInformation" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__UserInfor__userI__40F9A68C" Association="Self.FK__UserInfor__userI__40F9A68C">
+    <AssociationSet Name="FK__UserInfor__userI__4F47C5E3" Association="Self.FK__UserInfor__userI__4F47C5E3">
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserInformation" EntitySet="UserInformation" />
     </AssociationSet>

@@ -18,6 +18,8 @@ namespace Park_System.Utils
 
         public UserInformation UserInformation { get; set; }
 
+        public ParkSlot ParkSlot { get; set; }
+
         //************
         private UserLogged()
         {
