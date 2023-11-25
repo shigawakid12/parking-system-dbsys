@@ -45,5 +45,12 @@ namespace Park_System.Forms
 
 
         }
+
+        private void vehicleLeavingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_User frmuser = new Frm_User();
+            frmuser.Show();
+        }
     }
 }

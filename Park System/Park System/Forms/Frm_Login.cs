@@ -37,7 +37,7 @@ namespace Park_System.Forms
 
         private void log_btnlogin_Click(object sender, EventArgs e)
         {
-            //ParkingEntities1 db = new ParkingEntities1();
+          
             if (String.IsNullOrEmpty(log_txtusername.Text))
             {
                 errorProvider1.SetError(log_txtusername, "Empty Field!");
@@ -83,6 +83,11 @@ namespace Park_System.Forms
             //db.Database.ExecuteSqlCommand()
 
             // db.Database.ExecuteSqlCommand($"INSERT INTO VALUES {}");
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

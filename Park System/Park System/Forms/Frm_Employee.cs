@@ -16,6 +16,7 @@ namespace Park_System.Forms
     {
         ParkingEntities db = new ParkingEntities();
         UserRepository userRepo;
+        int? userSelectedId = null;
         public Frm_Employee()
         {
             InitializeComponent();
@@ -59,17 +60,12 @@ namespace Park_System.Forms
                 errorProvider1.SetError(Emp_txtDateEnter, "Empty Field!");
                 return;
             }
-            if (String.IsNullOrEmpty(Emp_lblslot.Text))
-            {
-                errorProvider1.SetError(Emp_lblslot, "Empty Field!");
-                return;
-            }
 
             ParkSlot Slots = new ParkSlot();
-            Slots.userPlatenum = Emp_txtPlateno.Text;
-            Slots.userTypeCar = Emp_txtCarbrand.Text;
-            Slots.userTimeArrive = Emp_txtDateEnter.Text;
-            Slots.userTimeOut = " ";
+            Slots.AuserPlatenum = Emp_txtPlateno.Text;
+            Slots.AuserTypeCar = Emp_txtCarbrand.Text;
+            Slots.AuserTimeArrive = Emp_txtDateEnter.Text;
+            Slots.AuserTimeOut = " ";
             //Slots.parkSlot= 
           
             db.ParkSlot.Add(Slots);
@@ -111,11 +107,25 @@ namespace Park_System.Forms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            try
+            {
+                userSelectedId = (Int32)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                Emp_txtPlateno.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value as String;
+                Emp_txtCarbrand.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value as String;
+            }
+            catch { }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                userSelectedId = (Int32)dataGridView1[0,e.RowIndex].Value;
+                Emp_txtPlateno.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value as String;
+                Emp_txtCarbrand.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value as String;
+            }
+            catch { }
+
 
         }
 
@@ -126,7 +136,12 @@ namespace Park_System.Forms
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            userSelectedId = (Int32)dataGridView1[0, e.RowIndex].Value;
+            Emp_txtPlateno.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value as String;
+            Emp_txtCarbrand.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value as String;
+            Emp_txtDateEnter.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value as String;
+           
+           // Sqlcommand c = new Sqlcommand("select * from ParkSlot");
         }
     }
 }

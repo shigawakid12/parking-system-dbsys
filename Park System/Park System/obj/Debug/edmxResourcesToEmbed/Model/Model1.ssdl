@@ -5,10 +5,10 @@
       <PropertyRef Name="parkSlot" />
     </Key>
     <Property Name="parkSlot" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="userPlatenum" Type="nvarchar" MaxLength="50" />
-    <Property Name="userTypeCar" Type="varchar" MaxLength="50" />
-    <Property Name="userTimeOut" Type="varchar" MaxLength="50" />
-    <Property Name="userTimeArrive" Type="varchar" MaxLength="50" />
+    <Property Name="AuserPlatenum" Type="nvarchar" MaxLength="50" />
+    <Property Name="AuserTypeCar" Type="varchar" MaxLength="50" />
+    <Property Name="AuserTimeOut" Type="varchar" MaxLength="50" />
+    <Property Name="AuserTimeArrive" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Role">
     <Key>

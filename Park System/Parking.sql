@@ -46,10 +46,10 @@ SET IDENTITY_INSERT [dbo].[Role] OFF
 
 create table ParkSlot (
 	parkSlot int identity (1,1) primary key,
-	userPlatenum [nvarchar] (50),
-	userTypeCar varchar (50) NULL,
-	userTimeOut Varchar (50) NULL,
-	userTimeArrive varchar (50)NULL
+	AuserPlatenum [nvarchar] (50),
+	AuserTypeCar varchar (50) NULL,
+	AuserTimeOut Varchar (50) NULL,
+	AuserTimeArrive varchar (50)NULL
 );
 
 SELECT UserInformation.userPlatenum, UserInformation.userTimeArrive, UserInformation.userTypeCar, UserInformation.userTimeOut,

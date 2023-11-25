@@ -61,10 +61,10 @@
       <PropertyRef Name="parkSlot" />
     </Key>
     <Property Name="parkSlot" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="userPlatenum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="userTypeCar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="userTimeOut" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="userTimeArrive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AuserPlatenum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AuserTypeCar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AuserTimeOut" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AuserTimeArrive" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Role">
     <Key>

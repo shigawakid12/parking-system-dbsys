@@ -50,6 +50,14 @@ namespace Park_System.Repository
             }
         }
 
+        public ParkSlot GetSlotbyClick(int? parkID)
+        {
+            using (db = new ParkingEntities())
+            {
+                return db.ParkSlot.Where(c => c.parkSlot == parkID).FirstOrDefault();
+            }
+        }
+
         public List<UserAccount> UserAccounts()
         {
             using (db = new ParkingEntities())
