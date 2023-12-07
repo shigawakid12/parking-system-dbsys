@@ -14,12 +14,6 @@ namespace Park_System.Model
     
     public partial class UserAccount
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UserAccount()
-        {
-            this.UserInformation = new HashSet<UserInformation>();
-        }
-    
         public int userId { get; set; }
         public string userName { get; set; }
         public string userPassword { get; set; }
@@ -27,7 +21,5 @@ namespace Park_System.Model
         public string userStatus { get; set; }
     
         public virtual Role Role { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserInformation> UserInformation { get; set; }
     }
 }

@@ -4,14 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f00128e6945e46fc8dc2fcb5a24b71d0" Name="Diagram1" ZoomLevel="93">
-        <EntityTypeShape EntityType="ParkingModel.ParkSlot" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="ParkingModel.Role" Width="1.5" PointX="0.75" PointY="1.25" />
-        <EntityTypeShape EntityType="ParkingModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="ParkingModel.UserAccount" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="ParkingModel.UserInformation" Width="1.5" PointX="5.25" PointY="1" />
+      <Diagram DiagramId="36446045408b405f8d862d86c4ded739" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="ParkingModel.ParkSlot" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="ParkingModel.Role" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="ParkingModel.UserAccount" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="ParkingModel.UserInformation" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="ParkingModel.FK_UserInformation_ParkSlot" />
         <AssociationConnector Association="ParkingModel.FK_UserAccount_Role" />
-        <AssociationConnector Association="ParkingModel.FK__UserInfor__userI__4F47C5E3" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

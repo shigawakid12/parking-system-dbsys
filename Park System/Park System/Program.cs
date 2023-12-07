@@ -23,7 +23,7 @@ namespace Park_System
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_User());
+            Application.Run(new Frm_Login());
 
             //Thread newThread1 = new Thread(form_login);
             //Thread newThread2 = new Thread(form_signup);

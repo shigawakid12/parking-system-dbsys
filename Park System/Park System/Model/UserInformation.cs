@@ -14,13 +14,13 @@ namespace Park_System.Model
     
     public partial class UserInformation
     {
-        public string userPlatenum { get; set; }
+        public int userInfo { get; set; }
+        public string AuserPlatenum { get; set; }
         public string userTypeCar { get; set; }
         public string userTimeOut { get; set; }
         public string userTimeArrive { get; set; }
-        public Nullable<int> userId { get; set; }
         public Nullable<int> parkSlot { get; set; }
     
-        public virtual UserAccount UserAccount { get; set; }
+        public virtual ParkSlot ParkSlot1 { get; set; }
     }
 }

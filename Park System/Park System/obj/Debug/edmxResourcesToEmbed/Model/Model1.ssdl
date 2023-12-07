@@ -2,10 +2,10 @@
 <Schema Namespace="ParkingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ParkSlot">
     <Key>
-      <PropertyRef Name="parkSlot" />
+      <PropertyRef Name="AuserPlatenum" />
     </Key>
-    <Property Name="parkSlot" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="AuserPlatenum" Type="nvarchar" MaxLength="50" />
+    <Property Name="parkSlot" Type="int" />
+    <Property Name="AuserPlatenum" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="AuserTypeCar" Type="varchar" MaxLength="50" />
     <Property Name="AuserTimeOut" Type="varchar" MaxLength="50" />
     <Property Name="AuserTimeArrive" Type="varchar" MaxLength="50" />
@@ -17,16 +17,6 @@
     <Property Name="roleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="roleName" Type="nvarchar" MaxLength="50" />
     <Property Name="roleDescription" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="UserAccount">
     <Key>
@@ -40,27 +30,15 @@
   </EntityType>
   <EntityType Name="UserInformation">
     <Key>
-      <PropertyRef Name="userPlatenum" />
+      <PropertyRef Name="userInfo" />
     </Key>
-    <Property Name="userPlatenum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="userInfo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AuserPlatenum" Type="varchar" MaxLength="50" />
     <Property Name="userTypeCar" Type="varchar" MaxLength="50" />
     <Property Name="userTimeOut" Type="varchar" MaxLength="50" />
     <Property Name="userTimeArrive" Type="varchar" MaxLength="50" />
-    <Property Name="userId" Type="int" />
     <Property Name="parkSlot" Type="int" />
   </EntityType>
-  <Association Name="FK__UserInfor__userI__4F47C5E3">
-    <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="0..1" />
-    <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UserAccount">
-        <PropertyRef Name="userId" />
-      </Principal>
-      <Dependent Role="UserInformation">
-        <PropertyRef Name="userId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_UserAccount_Role">
     <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
     <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="*" />
@@ -70,6 +48,18 @@
       </Principal>
       <Dependent Role="UserAccount">
         <PropertyRef Name="roleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInformation_ParkSlot">
+    <End Role="ParkSlot" Type="Self.ParkSlot" Multiplicity="0..1" />
+    <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParkSlot">
+        <PropertyRef Name="AuserPlatenum" />
+      </Principal>
+      <Dependent Role="UserInformation">
+        <PropertyRef Name="AuserPlatenum" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -107,16 +97,15 @@
   <EntityContainer Name="ParkingModelStoreContainer">
     <EntitySet Name="ParkSlot" EntityType="Self.ParkSlot" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserInformation" EntityType="Self.UserInformation" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__UserInfor__userI__4F47C5E3" Association="Self.FK__UserInfor__userI__4F47C5E3">
-      <End Role="UserAccount" EntitySet="UserAccount" />
-      <End Role="UserInformation" EntitySet="UserInformation" />
-    </AssociationSet>
     <AssociationSet Name="FK_UserAccount_Role" Association="Self.FK_UserAccount_Role">
       <End Role="Role" EntitySet="Role" />
       <End Role="UserAccount" EntitySet="UserAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInformation_ParkSlot" Association="Self.FK_UserInformation_ParkSlot">
+      <End Role="ParkSlot" EntitySet="ParkSlot" />
+      <End Role="UserInformation" EntitySet="UserInformation" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

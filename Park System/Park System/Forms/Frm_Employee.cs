@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Park_System.Forms
 {
@@ -61,12 +62,14 @@ namespace Park_System.Forms
                 return;
             }
 
+           
+
             ParkSlot Slots = new ParkSlot();
             Slots.AuserPlatenum = Emp_txtPlateno.Text;
             Slots.AuserTypeCar = Emp_txtCarbrand.Text;
             Slots.AuserTimeArrive = Emp_txtDateEnter.Text;
             Slots.AuserTimeOut = " ";
-            //Slots.parkSlot= 
+            Slots.parkSlot = (Int32)Emp_cbSlot.SelectedIndex;
           
             db.ParkSlot.Add(Slots);
             db.SaveChanges();
@@ -81,15 +84,18 @@ namespace Park_System.Forms
 
         }
 
+        
+
         private void Frm_Employee_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'parkingDataSet.ParkSlot' table. You can move, or remove it, as needed.
-           // this.parkSlotTableAdapter.Fill(this.parkingDataSet.ParkSlot);
+           
             userRepo = new UserRepository();
             loadUser();
             Emp_txtDateEnter.Text = Convert.ToString(DateTime.Now);
 
         }
+
+
 
         private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -142,6 +148,16 @@ namespace Park_System.Forms
             Emp_txtDateEnter.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value as String;
            
            // Sqlcommand c = new Sqlcommand("select * from ParkSlot");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Emp_cbSlot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

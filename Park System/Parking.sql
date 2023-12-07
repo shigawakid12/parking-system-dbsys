@@ -11,13 +11,12 @@ userStatus varchar (10) not NULL default 'ACTIVE',
 );
 
 CREATE TABLE UserInformation (
-userPlatenum varchar(50) primary key,
+userInfo int identity(1,1) primary key, 
+AuserPlatenum varchar(50),
 userTypeCar varchar (50) NULL,
 userTimeOut Varchar (50) NULL,
 userTimeArrive varchar (50)NULL,
-userId integer,
-FOREIGN KEY (userId) REFERENCES UserAccount(userId),
-parkSlot int
+slotId int
 );
 
 
@@ -45,12 +44,26 @@ delete from [dbo].[Role] where roleId = 3;
 SET IDENTITY_INSERT [dbo].[Role] OFF
 
 create table ParkSlot (
-	parkSlot int identity (1,1) primary key,
-	AuserPlatenum [nvarchar] (50),
+	slotId int IDENTITY(1,1) primary key,
+	parkSlot int NULL,
+	parkName varchar(20),
+	AuserPlatenum varchar (50),
 	AuserTypeCar varchar (50) NULL,
 	AuserTimeOut Varchar (50) NULL,
-	AuserTimeArrive varchar (50)NULL
+	AuserTimeArrive varchar (50)NULL,
+
 );
+
+insert ParkSlot (parkSlot,parkName) values(1,N'Slot 1');
+insert ParkSlot (parkSlot,parkName) values(2,N'Slot 2');
+insert ParkSlot (parkSlot,parkName) values(3,N'Slot 3');
+insert ParkSlot (parkSlot,parkName) values(4,N'Slot 4');
+insert ParkSlot (parkSlot,parkName) values(5,N'Slot 5');
+insert ParkSlot (parkSlot,parkName) values(6,N'Slot 6');
+insert ParkSlot (parkSlot,parkName) values(7,N'Slot 7');
+insert ParkSlot (parkSlot,parkName) values(8,N'Slot 8');
+insert ParkSlot (parkSlot,parkName) values(9,N'Slot 9');
+insert ParkSlot (parkSlot,parkName) values(10,N'Slot 10');
 
 SELECT UserInformation.userPlatenum, UserInformation.userTimeArrive, UserInformation.userTypeCar, UserInformation.userTimeOut,
 ParkSlot.parkSlot From UserInformation JOIN ParkSlot ON UserInformation.parkSlot = ParkSlot.parkSlot

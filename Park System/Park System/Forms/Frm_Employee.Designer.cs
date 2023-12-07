@@ -52,12 +52,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_print = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.parkSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.parkSlotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserPlatenumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserTypeCarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserTimeArriveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Emp_cbSlot = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -123,7 +124,7 @@
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(27, 289);
+            this.btn_Save.Location = new System.Drawing.Point(25, 326);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(86, 32);
             this.btn_Save.TabIndex = 8;
@@ -134,7 +135,7 @@
             // btn_Update
             // 
             this.btn_Update.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Update.Location = new System.Drawing.Point(122, 289);
+            this.btn_Update.Location = new System.Drawing.Point(120, 326);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(86, 32);
             this.btn_Update.TabIndex = 9;
@@ -222,8 +223,7 @@
             this.parkSlotDataGridViewTextBoxColumn,
             this.auserPlatenumDataGridViewTextBoxColumn,
             this.auserTypeCarDataGridViewTextBoxColumn,
-            this.auserTimeArriveDataGridViewTextBoxColumn,
-            this.Column1});
+            this.auserTimeArriveDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.parkSlotBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(306, 88);
             this.dataGridView1.Name = "dataGridView1";
@@ -234,58 +234,81 @@
             // btn_print
             // 
             this.btn_print.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print.Location = new System.Drawing.Point(214, 289);
+            this.btn_print.Location = new System.Drawing.Point(212, 326);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(86, 32);
             this.btn_print.TabIndex = 19;
             this.btn_print.Text = "Print";
             this.btn_print.UseVisualStyleBackColor = true;
             // 
-            // parkSlotBindingSource
-            // 
-            this.parkSlotBindingSource.DataSource = typeof(Park_System.Model.ParkSlot);
-            // 
             // parkSlotDataGridViewTextBoxColumn
             // 
             this.parkSlotDataGridViewTextBoxColumn.DataPropertyName = "parkSlot";
-            this.parkSlotDataGridViewTextBoxColumn.HeaderText = "Slot No.";
+            this.parkSlotDataGridViewTextBoxColumn.HeaderText = "parkSlot";
             this.parkSlotDataGridViewTextBoxColumn.Name = "parkSlotDataGridViewTextBoxColumn";
-            this.parkSlotDataGridViewTextBoxColumn.Width = 50;
             // 
             // auserPlatenumDataGridViewTextBoxColumn
             // 
             this.auserPlatenumDataGridViewTextBoxColumn.DataPropertyName = "AuserPlatenum";
-            this.auserPlatenumDataGridViewTextBoxColumn.HeaderText = "Plate No.";
+            this.auserPlatenumDataGridViewTextBoxColumn.HeaderText = "AuserPlatenum";
             this.auserPlatenumDataGridViewTextBoxColumn.Name = "auserPlatenumDataGridViewTextBoxColumn";
-            this.auserPlatenumDataGridViewTextBoxColumn.Width = 110;
             // 
             // auserTypeCarDataGridViewTextBoxColumn
             // 
             this.auserTypeCarDataGridViewTextBoxColumn.DataPropertyName = "AuserTypeCar";
-            this.auserTypeCarDataGridViewTextBoxColumn.HeaderText = "Car Type";
+            this.auserTypeCarDataGridViewTextBoxColumn.HeaderText = "AuserTypeCar";
             this.auserTypeCarDataGridViewTextBoxColumn.Name = "auserTypeCarDataGridViewTextBoxColumn";
-            this.auserTypeCarDataGridViewTextBoxColumn.Width = 110;
             // 
             // auserTimeArriveDataGridViewTextBoxColumn
             // 
             this.auserTimeArriveDataGridViewTextBoxColumn.DataPropertyName = "AuserTimeArrive";
-            this.auserTimeArriveDataGridViewTextBoxColumn.HeaderText = "Time Arrive";
+            this.auserTimeArriveDataGridViewTextBoxColumn.HeaderText = "AuserTimeArrive";
             this.auserTimeArriveDataGridViewTextBoxColumn.Name = "auserTimeArriveDataGridViewTextBoxColumn";
-            this.auserTimeArriveDataGridViewTextBoxColumn.Width = 110;
             // 
-            // Column1
+            // parkSlotBindingSource
             // 
-            this.Column1.DataPropertyName = "AuserTimeOut";
-            this.Column1.HeaderText = "Time Out";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 110;
+            this.parkSlotBindingSource.DataSource = typeof(Park_System.Model.ParkSlot);
+            // 
+            // Emp_cbSlot
+            // 
+            this.Emp_cbSlot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Emp_cbSlot.FormattingEnabled = true;
+            this.Emp_cbSlot.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.Emp_cbSlot.Location = new System.Drawing.Point(25, 270);
+            this.Emp_cbSlot.Name = "Emp_cbSlot";
+            this.Emp_cbSlot.Size = new System.Drawing.Size(257, 29);
+            this.Emp_cbSlot.TabIndex = 20;
+            this.Emp_cbSlot.SelectedIndexChanged += new System.EventHandler(this.Emp_cbSlot_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 246);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 21);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Park Slot";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Frm_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
-            this.ClientSize = new System.Drawing.Size(843, 348);
+            this.ClientSize = new System.Drawing.Size(843, 391);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Emp_cbSlot);
             this.Controls.Add(this.btn_print);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
@@ -347,7 +370,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn auserPlatenumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserTypeCarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserTimeArriveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.BindingSource parkSlotBindingSource;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox Emp_cbSlot;
     }
 }

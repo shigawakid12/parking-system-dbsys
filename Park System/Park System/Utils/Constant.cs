@@ -20,7 +20,16 @@ namespace Park_System.Utils
     }
     public enum parkSlot
     {
-
+        Park1 = 1, 
+        Park2 = 2,
+        Park3 = 3,
+        Park4 = 4,
+        Park5 = 5,
+        Park6 = 6,
+        Park7 = 7,
+        Park8 = 8,
+        Park9 = 9,
+        Park10 = 10,
     }
 
 
