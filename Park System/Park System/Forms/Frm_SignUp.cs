@@ -87,6 +87,7 @@ namespace Park_System.Forms
             sign_txtName.Clear();
             sign_txtPassword.Clear();
             sign_txtUsername.Clear();
+            sign_txtconfirmpass.Clear();
             MessageBox.Show("Successfully Registered!");
         }
 

@@ -69,7 +69,7 @@ namespace Park_System.Forms
             Slots.AuserTypeCar = Emp_txtCarbrand.Text;
             Slots.AuserTimeArrive = Emp_txtDateEnter.Text;
             Slots.AuserTimeOut = " ";
-            Slots.parkSlot = (Int32)Emp_cbSlot.SelectedIndex;
+            Slots.parkSlot = (Int32)Emp_cbSlot.SelectedValue;
           
             db.ParkSlot.Add(Slots);
             db.SaveChanges();
@@ -94,7 +94,14 @@ namespace Park_System.Forms
             Emp_txtDateEnter.Text = Convert.ToString(DateTime.Now);
 
         }
+        private void loadcomboBox1()
+        {
+            var roles = db.ParkSlot.ToList();
 
+            Emp_cbSlot.ValueMember = "";
+            Emp_cbSlot.DisplayMember = "roleName";
+            Emp_cbSlot.DataSource = roles;
+        }
 
 
         private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)

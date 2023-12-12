@@ -74,15 +74,14 @@ namespace Park_System.Forms
 
 
         }
-
-        private void parkingSlotToolStripMenuItem_Click(object sender, EventArgs e)
+        private void parkSlotToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_Employee frm_Employee = new Frm_Employee();
-            frm_Employee.Show();
+            Frm_Employee employee = new Frm_Employee();
+            employee.Show();
         }
 
-        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Frm_Login frm_Login = new Frm_Login();

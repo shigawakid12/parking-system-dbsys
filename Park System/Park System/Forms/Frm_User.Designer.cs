@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_User));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AuserTimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.parkingSlotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parkSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.parkSlotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parkSlotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserPlatenumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserTypeCarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserTimeArriveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AuserTimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parkSlotBindingSource)).BeginInit();
@@ -59,20 +59,31 @@
             this.auserTimeArriveDataGridViewTextBoxColumn,
             this.AuserTimeOut});
             this.dataGridView1.DataSource = this.parkSlotBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 141);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 174);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(549, 320);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(732, 394);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_motorcycle_CellContentClick);
+            // 
+            // AuserTimeOut
+            // 
+            this.AuserTimeOut.DataPropertyName = "AuserTimeOut";
+            this.AuserTimeOut.HeaderText = "Time Out";
+            this.AuserTimeOut.MinimumWidth = 6;
+            this.AuserTimeOut.Name = "AuserTimeOut";
+            this.AuserTimeOut.Width = 110;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(201, 25);
+            this.label1.Location = new System.Drawing.Point(268, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 38);
+            this.label1.Size = new System.Drawing.Size(203, 47);
             this.label1.TabIndex = 14;
             this.label1.Text = "LEAVING ";
             // 
@@ -80,57 +91,57 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(219, 80);
+            this.label2.Location = new System.Drawing.Point(292, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 19);
+            this.label2.Size = new System.Drawing.Size(131, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Parking Slots";
             // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton1});
+            this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(573, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(764, 27);
             this.toolStrip1.TabIndex = 16;
             this.toolStrip1.Text = "Edit";
             // 
-            // toolStripSplitButton1
+            // toolStripDropDownButton1
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.parkingSlotToolStripMenuItem,
-            this.logOutToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(43, 22);
-            this.toolStripSplitButton1.Text = "Edit";
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parkSlotToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(49, 24);
+            this.toolStripDropDownButton1.Text = "Edit";
+            this.toolStripDropDownButton1.ToolTipText = "Edit";
             // 
-            // parkingSlotToolStripMenuItem
+            // parkSlotToolStripMenuItem
             // 
-            this.parkingSlotToolStripMenuItem.Name = "parkingSlotToolStripMenuItem";
-            this.parkingSlotToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.parkingSlotToolStripMenuItem.Text = "Parking Slot";
-            this.parkingSlotToolStripMenuItem.Click += new System.EventHandler(this.parkingSlotToolStripMenuItem_Click);
+            this.parkSlotToolStripMenuItem.Name = "parkSlotToolStripMenuItem";
+            this.parkSlotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.parkSlotToolStripMenuItem.Text = "Park Slot";
+            this.parkSlotToolStripMenuItem.Click += new System.EventHandler(this.parkSlotToolStripMenuItem_Click);
             // 
-            // logOutToolStripMenuItem
+            // logoutToolStripMenuItem
             // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logOutToolStripMenuItem.Text = "Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // parkSlotBindingSource
-            // 
-            this.parkSlotBindingSource.DataSource = typeof(Park_System.Model.ParkSlot);
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
             // parkSlotDataGridViewTextBoxColumn
             // 
             this.parkSlotDataGridViewTextBoxColumn.DataPropertyName = "parkSlot";
             this.parkSlotDataGridViewTextBoxColumn.HeaderText = "Slot No.";
+            this.parkSlotDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.parkSlotDataGridViewTextBoxColumn.Name = "parkSlotDataGridViewTextBoxColumn";
             this.parkSlotDataGridViewTextBoxColumn.Width = 50;
             // 
@@ -138,6 +149,7 @@
             // 
             this.auserPlatenumDataGridViewTextBoxColumn.DataPropertyName = "AuserPlatenum";
             this.auserPlatenumDataGridViewTextBoxColumn.HeaderText = "Plate No.";
+            this.auserPlatenumDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.auserPlatenumDataGridViewTextBoxColumn.Name = "auserPlatenumDataGridViewTextBoxColumn";
             this.auserPlatenumDataGridViewTextBoxColumn.Width = 110;
             // 
@@ -145,6 +157,7 @@
             // 
             this.auserTypeCarDataGridViewTextBoxColumn.DataPropertyName = "AuserTypeCar";
             this.auserTypeCarDataGridViewTextBoxColumn.HeaderText = "Car Type";
+            this.auserTypeCarDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.auserTypeCarDataGridViewTextBoxColumn.Name = "auserTypeCarDataGridViewTextBoxColumn";
             this.auserTypeCarDataGridViewTextBoxColumn.Width = 110;
             // 
@@ -152,26 +165,25 @@
             // 
             this.auserTimeArriveDataGridViewTextBoxColumn.DataPropertyName = "AuserTimeArrive";
             this.auserTimeArriveDataGridViewTextBoxColumn.HeaderText = "Time Arrive";
+            this.auserTimeArriveDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.auserTimeArriveDataGridViewTextBoxColumn.Name = "auserTimeArriveDataGridViewTextBoxColumn";
             this.auserTimeArriveDataGridViewTextBoxColumn.Width = 125;
             // 
-            // AuserTimeOut
+            // parkSlotBindingSource
             // 
-            this.AuserTimeOut.DataPropertyName = "AuserTimeOut";
-            this.AuserTimeOut.HeaderText = "Time Out";
-            this.AuserTimeOut.Name = "AuserTimeOut";
-            this.AuserTimeOut.Width = 110;
+            this.parkSlotBindingSource.DataSource = typeof(Park_System.Model.ParkSlot);
             // 
             // Frm_User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(573, 517);
+            this.ClientSize = new System.Drawing.Size(764, 636);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -194,14 +206,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeCarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userTimeArriveDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem parkingSlotToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.BindingSource parkSlotBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn parkSlotDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserPlatenumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserTypeCarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserTimeArriveDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn AuserTimeOut;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem parkSlotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
