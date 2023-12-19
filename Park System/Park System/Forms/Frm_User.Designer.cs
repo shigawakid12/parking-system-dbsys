@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_User));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.AuserTimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -42,10 +42,10 @@
             this.auserPlatenumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserTypeCarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auserTimeArriveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parkSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AuserTimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parkSlotBindingSource)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,7 +60,7 @@
             this.AuserTimeOut});
             this.dataGridView1.DataSource = this.parkSlotBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(16, 174);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(732, 394);
@@ -68,13 +68,9 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_motorcycle_CellContentClick);
             // 
-            // AuserTimeOut
+            // parkSlotBindingSource
             // 
-            this.AuserTimeOut.DataPropertyName = "AuserTimeOut";
-            this.AuserTimeOut.HeaderText = "Time Out";
-            this.AuserTimeOut.MinimumWidth = 6;
-            this.AuserTimeOut.Name = "AuserTimeOut";
-            this.AuserTimeOut.Width = 110;
+            this.parkSlotBindingSource.DataSource = typeof(Park_System.Model.ParkSlot);
             // 
             // label1
             // 
@@ -126,14 +122,14 @@
             // parkSlotToolStripMenuItem
             // 
             this.parkSlotToolStripMenuItem.Name = "parkSlotToolStripMenuItem";
-            this.parkSlotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.parkSlotToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.parkSlotToolStripMenuItem.Text = "Park Slot";
             this.parkSlotToolStripMenuItem.Click += new System.EventHandler(this.parkSlotToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
@@ -151,7 +147,7 @@
             this.auserPlatenumDataGridViewTextBoxColumn.HeaderText = "Plate No.";
             this.auserPlatenumDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.auserPlatenumDataGridViewTextBoxColumn.Name = "auserPlatenumDataGridViewTextBoxColumn";
-            this.auserPlatenumDataGridViewTextBoxColumn.Width = 110;
+            this.auserPlatenumDataGridViewTextBoxColumn.Width = 120;
             // 
             // auserTypeCarDataGridViewTextBoxColumn
             // 
@@ -159,7 +155,7 @@
             this.auserTypeCarDataGridViewTextBoxColumn.HeaderText = "Car Type";
             this.auserTypeCarDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.auserTypeCarDataGridViewTextBoxColumn.Name = "auserTypeCarDataGridViewTextBoxColumn";
-            this.auserTypeCarDataGridViewTextBoxColumn.Width = 110;
+            this.auserTypeCarDataGridViewTextBoxColumn.Width = 120;
             // 
             // auserTimeArriveDataGridViewTextBoxColumn
             // 
@@ -167,11 +163,15 @@
             this.auserTimeArriveDataGridViewTextBoxColumn.HeaderText = "Time Arrive";
             this.auserTimeArriveDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.auserTimeArriveDataGridViewTextBoxColumn.Name = "auserTimeArriveDataGridViewTextBoxColumn";
-            this.auserTimeArriveDataGridViewTextBoxColumn.Width = 125;
+            this.auserTimeArriveDataGridViewTextBoxColumn.Width = 200;
             // 
-            // parkSlotBindingSource
+            // AuserTimeOut
             // 
-            this.parkSlotBindingSource.DataSource = typeof(Park_System.Model.ParkSlot);
+            this.AuserTimeOut.DataPropertyName = "AuserTimeOut";
+            this.AuserTimeOut.HeaderText = "Time Out";
+            this.AuserTimeOut.MinimumWidth = 6;
+            this.AuserTimeOut.Name = "AuserTimeOut";
+            this.AuserTimeOut.Width = 200;
             // 
             // Frm_User
             // 
@@ -183,15 +183,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Frm_User_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkSlotBindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.parkSlotBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,13 +207,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userTimeArriveDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.BindingSource parkSlotBindingSource;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem parkSlotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn parkSlotDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserPlatenumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserTypeCarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn auserTimeArriveDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn AuserTimeOut;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem parkSlotToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

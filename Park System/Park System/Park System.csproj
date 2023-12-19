@@ -172,6 +172,7 @@
     <None Include="ParkingDataSet.xss">
       <DependentUpon>ParkingDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Park_System.Model.ParkingEntities.datasource" />
     <None Include="Properties\DataSources\Park_System.Model.ParkSlot.datasource" />
     <None Include="Properties\DataSources\Park_System.Model.UserInformation.datasource" />
     <None Include="Properties\Settings.settings">
