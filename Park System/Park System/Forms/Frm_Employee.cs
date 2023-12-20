@@ -148,10 +148,10 @@ namespace Park_System.Forms
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            userSelectedId = (Int32)dataGridView1[0, e.RowIndex].Value;
-            Emp_txtPlateno.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value as String;
-            Emp_txtCarbrand.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value as String;
-            Emp_txtDateEnter.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value as String;
+            //userSelectedId = (Int32)dataGridView1[0, e.RowIndex].Value;
+            //Emp_txtPlateno.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value as String;
+            //Emp_txtCarbrand.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value as String;
+            //Emp_txtDateEnter.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value as String;
            
            // Sqlcommand c = new Sqlcommand("select * from ParkSlot");
         }

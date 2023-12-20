@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="36446045408b405f8d862d86c4ded739" Name="Diagram1" ZoomLevel="94">
+      <Diagram DiagramId="36446045408b405f8d862d86c4ded739" Name="Diagram1" ZoomLevel="81">
         <EntityTypeShape EntityType="ParkingModel.ParkSlot" Width="1.5" PointX="0.75" PointY="1" />
         <EntityTypeShape EntityType="ParkingModel.Role" Width="1.5" PointX="0.75" PointY="5.125" />
         <EntityTypeShape EntityType="ParkingModel.UserAccount" Width="1.5" PointX="3" PointY="4.875" />
