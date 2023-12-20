@@ -75,3 +75,22 @@ C:\Users\CharlesLee\Documents\GitHub\parking-system-dbsys\Park System\Park Syste
 C:\Users\CharlesLee\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CopyComplete
 C:\Users\CharlesLee\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.exe
 C:\Users\CharlesLee\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.pdb
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.AssemblyReference.cache
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Admin_Dashboard.resources
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Employee.resources
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_Login.resources
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_SignUp.resources
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Forms.Frm_User.resources
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park_System.Properties.Resources.resources
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.GenerateResource.cache
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CoreCompileInputs.cache
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.exe
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.pdb
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.exe.config
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.exe
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\Park System.pdb
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.dll
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.xml
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CharlesLee\OneDrive\Documents\GitHub\parking-system-dbsys\Park System\Park System\obj\Debug\Park System.csproj.CopyComplete

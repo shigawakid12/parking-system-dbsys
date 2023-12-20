@@ -177,6 +177,7 @@
     <None Include="ParkingDataSet.xss">
       <DependentUpon>ParkingDataSet.xsd</DependentUpon>
     </None>
+<<<<<<< HEAD
     <None Include="ParkingDataSet1.xsc">
       <DependentUpon>ParkingDataSet1.xsd</DependentUpon>
     </None>
@@ -188,6 +189,9 @@
     <None Include="ParkingDataSet1.xss">
       <DependentUpon>ParkingDataSet1.xsd</DependentUpon>
     </None>
+=======
+    <None Include="Properties\DataSources\Park_System.Model.ParkingEntities.datasource" />
+>>>>>>> a7dd667dab037acef8ee39aa85125ee58b4ea6cf
     <None Include="Properties\DataSources\Park_System.Model.ParkSlot.datasource" />
     <None Include="Properties\DataSources\Park_System.Model.UserInformation.datasource" />
     <None Include="Properties\Settings.settings">

@@ -62,25 +62,32 @@ namespace Park_System.Forms
                 return;
             }
 
-           
+            if (Emp_cbSlot.SelectedItem != null && Emp_cbSlot.SelectedItem is int selectedValue)
+            {
+                if (selectedValue >= 1 && selectedValue <= 10)
+                {
+                    MessageBox.Show("Parking Slot is already Occupied.");
+                }
+                else
+                    MessageBox.Show("Successfully Registered!");
+            }
+
 
             ParkSlot Slots = new ParkSlot();
             Slots.AuserPlatenum = Emp_txtPlateno.Text;
             Slots.AuserTypeCar = Emp_txtCarbrand.Text;
             Slots.AuserTimeArrive = Emp_txtDateEnter.Text;
             Slots.AuserTimeOut = " ";
-            Slots.parkSlot = (Int32)Emp_cbSlot.SelectedValue;
+            Slots.parkSlot = (int?)Emp_cbSlot.SelectedItem;
           
             db.ParkSlot.Add(Slots);
             db.SaveChanges();
 
             Emp_txtPlateno.Clear();
             Emp_txtCarbrand.Clear();
-            MessageBox.Show("Successfully Registered!");
-            loadUser();
 
             
-
+            loadUser();
 
         }
 
@@ -93,14 +100,6 @@ namespace Park_System.Forms
             loadUser();
             Emp_txtDateEnter.Text = Convert.ToString(DateTime.Now);
 
-        }
-        private void loadcomboBox1()
-        {
-            var roles = db.ParkSlot.ToList();
-
-            Emp_cbSlot.ValueMember = "";
-            Emp_cbSlot.DisplayMember = "roleName";
-            Emp_cbSlot.DataSource = roles;
         }
 
 
@@ -163,6 +162,11 @@ namespace Park_System.Forms
         }
 
         private void Emp_cbSlot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Emp_txtCarbrand_TextChanged(object sender, EventArgs e)
         {
 
         }

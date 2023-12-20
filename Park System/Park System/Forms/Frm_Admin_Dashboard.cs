@@ -40,8 +40,8 @@ namespace Park_System.Forms
         private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_User frm_User = new Frm_User();
-            frm_User.Show();
+            Frm_Employee frm_emp = new Frm_Employee();
+            frm_emp.Show();
 
 
         }
@@ -51,6 +51,11 @@ namespace Park_System.Forms
             this.Hide();
             Frm_User frmuser = new Frm_User();
             frmuser.Show();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
